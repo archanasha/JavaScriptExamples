@@ -103,6 +103,12 @@ button:active {
     }
 }
 
+/* .error-container {
+    color: rgb(218, 82, 82);
+    font-size: 2.75rem;
+    font-weight: 700;
+} */
+
 /* Media Query: Tablet or smaller devices */
 
 @media screen and (max-width:1000px) {

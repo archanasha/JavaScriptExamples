@@ -13,8 +13,10 @@ const loading = () => {
 }
 
 const loadComplete = () => {
-    loader.hidden = true;
-    quoteContainer.hidden = false;
+    if (!loader.hidden) {
+        loader.hidden = true;
+        quoteContainer.hidden = false;
+    }
 }
 
 // Get quotes from local js file
@@ -54,6 +56,8 @@ async function getQuotes() {
         newQuote();
     } catch (error) {
         // display custom error
+        loadComplete();
+        console.log('Oops!', error);
     }
 }
 
